@@ -106,6 +106,58 @@ const inputNumber = 5;
 const factorial = factorialCalculator(inputNumber);
 console.log(`${inputNumber}! = ${factorial}`);
 
+// 7.	შექმენით ფუნქცია, რომელიც სტრიქონის პირველ ასობგერის კაპიტალიზირებას მოახდენს მაგ. javascript => უნდა გახდეს: Javascript, ანუ J დიდი ასობგერით უნდა ეწეროს.
+
+function capitalizeFirstLetter(str) {
+  if (str.length === 0) {
+    return str;
+  }
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+const inputString = "javascript";
+const capitalizedString = capitalizeFirstLetter(inputString);
+console.log(capitalizedString);
+
+// 8.	შექმენით ფუნქცია, რომელიც შეამოწმებს არის თუ არა მასზე მიწოდებული სტრიქონი ცარიელი. მაგ. blankStringChecker(testString) => რომელიც დააბრუნებს this string is blank-ს თუ ცარიელია/ this string is not blank-ს თუ ცარიელი არაა.
+
+function blankStringChecker(str) {
+  if (str.trim() === '') {
+    return 'This string is blank';
+  } else {
+    return 'This string is not blank';
+  }
+}
+const testString1 = '';
+const testString2 = 'Hello, world!';
+
+console.log(blankStringChecker(testString1)); 
+console.log(blankStringChecker(testString2)); 
+
+// 9. შექმენით ფუნქცია, რომელიც მასზე მიწოდებულ სტრიქონს გადააქცევს მასივად. მაგ. stringToArray(testString) => თუ მივაწვდით სტრიქონს “Hello, World” => გამოიტანს მის ვერსიას მასივში. [“Hello”, “World”]
+
+function stringToArray(inputString) {
+  const wordsArray = inputString.split(' ');
+
+  return wordsArray;
+}
+const testString = "Hello, World";
+const resultArray = stringToArray(testString);
+console.log(resultArray); 
+
+// 10.	შექმენით ერთგვარი ემაილის დამცველი ფუნქცია, რომლის ფუნქციონალი მდგომარეობს შემდგომში: მომხმარებელი გაწვდის ემაილს წერტილით გამოყოფილ თავისი სახელით და გვარით, beqa.beqauri@gmail.com, თქვენი ფუნქცია კი გამოიტანს მის დაცულ ვერსიას ამ ფორმით:  beqa……..@gmail.com. წერტილების ოდენობა უნდა ემთხვეოდეს გვარის სიგრძეს.
+
+function protectEmail(email) {
+  const [username, domain] = email.split('@');
+  const [firstName, lastName] = username.split('.');
+  const dotsCount = lastName.length;
+  const protectedEmail = `${firstName}${'.'.repeat(dotsCount)}@${domain}`;
+
+  return protectedEmail;
+}
+const email = "beqa.beqauri@gmail.com";
+const protectedEmail = protectEmail(email);
+console.log(protectedEmail); 
+
 
 
 
