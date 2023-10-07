@@ -8,26 +8,29 @@
         <link rel="stylesheet" href="style/style.css">
     </head>
 <body>
-    <div id="calculator">
-        <input type="text" id="result" value="0" disabled>
-        <input type="button" value="1" onclick="appendToResult('1')">
-        <input type="button" value="2" onclick="appendToResult('2')">
-        <input type="button" value="3" onclick="appendToResult('3')">
-        <input class="plus" type="button" value="+" onclick="appendToResult('+')">
-        <input type="button" value="4" onclick="appendToResult('4')">
-        <input type="button" value="5" onclick="appendToResult('5')">
-        <input type="button" value="6" onclick="appendToResult('6')">       
-        <input type="button" value="7" onclick="appendToResult('7')">
-        <input type="button" value="8" onclick="appendToResult('8')">
-        <input type="button" value="9" onclick="appendToResult('9')">       
-        <input type="button" value="." onclick="appendToResult('.')">
-        <input type="button" value="0" onclick="appendToResult('0')">
-        <input type="button" value="*" onclick="appendToResult('*')">
-        <input type="button" value="-" onclick="appendToResult('-')">
-        <input class="clear" type="button" value="C" onclick="clearResult()">
-        <input class="equal" type="button" value="=" onclick="calculateResult()">
-        <input type="button" value="/" onclick="appendToResult('/')">
+    <div class="calculator">
+        <input type="text" id="result" readonly>
+        <div class="buttons">
+            
+            <button onclick="sevenHandler()">7</button>
+            <button onclick="eightHandler()">8</button>
+            <button onclick="nineHandler()">9</button>
+            <button onclick="divideHandler()">÷</button>
+            <button onclick="fourHandler()">4</button>
+            <button onclick="fiveHandler()">5</button>
+            <button onclick="sixHandler()">6</button>
+            <button onclick="multiplyHandler()">*</button>
+            <button onclick="oneHandler()">1</button>
+            <button onclick="twoHandler()">2</button>
+            <button onclick="threeHandler()">3</button>
+            <button onclick="minusHandler()">-</button>
+            <button class="clear" onclick="clearHandler()">C</button>
+            <button onclick="zeroHandler()">0</button>            
+            <button class="equal" onclick="equalsHandler()">=</button>
+            <button class="plus" conclick="plusHandler()">+</button>
+        </div>
     </div>
+
     <script type="text/javascript" src="script.js"></script> 
 
 </body>
