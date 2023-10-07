@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Registration</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h3>User Registration</h3>
+      <form id="registrationForm">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required />
+
+        <label for="last_name">Last Name:</label>
+        <input
+          type="text"
+          id="last_name"
+          name="last_name"
+          required="required"
+        />
+        <label for="location">Location:</label>
+
+        <input
+          type="text"
+          id="location" 
+          name="location"
+          required="required" 
+        />
+
+        <label for="username">Username:</label>
+        <input
+          type="text" 
+          id="username" 
+          name="username" 
+          required="required"
+        />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required="required"
+        />
+
+        <input type="submit" value="Register" />
+      </form>
+      <p  id="message"></p>
+    </div>
+    <script type="text/javascript" src="script/Registration.js"></script>
+  </body>
+</html>
