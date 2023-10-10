@@ -1,9 +1,10 @@
-function loginForm() {
+document.getElementById("loginForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
     let message = document.getElementById("message");
 
-    
     let existingDb = localStorage.getItem("usersData");
 
     if (existingDb) {
@@ -25,6 +26,4 @@ function loginForm() {
     } else {
         message.textContent = "No user data found. Please sign up.";
     }
-    return false;
-}
-
+});
