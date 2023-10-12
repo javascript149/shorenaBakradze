@@ -4,19 +4,20 @@ function validateInput(input, regex) {
 
 function registerUser(event) {
     event.preventDefault();
+    let firstName = document.getElementById("firstName");
+    let lastName = document.getElementById("lastName");
+    let email = document.getElementById("email");
+    let phone = document.getElementById("phone");
+    let username = document.getElementById("username");
+    let password = document.getElementById("password");
+    let messageElement = document.getElementById("message");
     
-    const firstName = document.getElementById("firstName");
-    const lastName = document.getElementById("lastName");
-    const email = document.getElementById("email");
-    const phone = document.getElementById("phone");
-    const username = document.getElementById("username");
-    const password = document.getElementById("password");
 
-    const nameRegex = /^[A-Za-z]{3,15}$/;
-    const emailRegex = /^[\w.-]+@[a-zA-Z_-]+?(?:\.[a-zA-Z]{2,6})+$/;
-    const phoneRegex = /^\+995\d{9}$/;
-    const usernameRegex = /^[a-zA-Z0-9_]{3,32}$/;
-    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$/;
+    let nameRegex = /^[A-Za-z]{3,15}$/;
+    let emailRegex = /^[\w.-]+@[a-zA-Z_-]+?(?:\.[a-zA-Z]{2,6})+$/;
+    let phoneRegex = /^\+995\d{9}$/;
+    let usernameRegex = /^[a-zA-Z0-9_]{3,32}$/;
+    let passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$/;
 
     if (
         validateInput(firstName, nameRegex) &&
@@ -26,7 +27,7 @@ function registerUser(event) {
         validateInput(username, usernameRegex) &&
         validateInput(password, passwordRegex)
     ) {
-        const userData = {
+        let userData = {
             firstName: firstName.value,
             lastName: lastName.value,
             email: email.value,
@@ -35,26 +36,35 @@ function registerUser(event) {
             password: password.value,
         };
 
-        // Store user data in localStorage
         localStorage.setItem(username.value, JSON.stringify(userData));
 
-        alert("Registration successful!");
+        // alert("Registration successful!");
+        messageElement.textContent = "Registration successful!";
+        messageElement.style.color = "green"; 
+        
     } else {
-        alert("Invalid input. Please check the fields.");
+        // alert("Invalid input. Please check the fields.");
+        messageElement.textContent = "Invalid input. Please check the fields.";
+        messageElement.style.color = "red"; 
     }
 }
+
 
 function loginUser(event) {
     event.preventDefault();
 
     const loginUsername = document.getElementById("loginUsername");
     const loginPassword = document.getElementById("loginPassword");
+    const messageElement = document.getElementById("message"); 
 
-    const userData = JSON.parse(localStorage.getItem(loginUsername.value));
-
+    let userData = JSON.parse(localStorage.getItem(loginUsername.value));
     if (userData && userData.password === loginPassword.value) {
-        alert("Login successful!");
+        messageElement.textContent = "Login successful!";
+        messageElement.style.color = "green"; 
+      
     } else {
-        alert("Invalid username or password.");
+        messageElement.textContent = "Invalid username or password.";
+        messageElement.style.color = "red"; 
     }
 }
+
