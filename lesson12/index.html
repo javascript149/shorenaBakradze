@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>slideshow</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
+  </head>
+  <body>
+    <div class="slider">
+        <div class="myPictures">
+          <div class="textNumber">1 / 5</div>
+          <img src="image/1.jpg" alt="photo">
+          <div class="title">pancake</div>
+                 </div>
+        <div class="myPictures">
+          <div class="textNumber">2 / 5</div>
+          <img src="image/2.jpg" alt="photo">
+          <div class="title">pancake</div>
+            </div>
+        <div class="myPictures">
+          <div class="textNumber">3 / 5</div>
+          <img src="image/3.jpg" alt="photo">
+          <div class="title">pancake</div>        
+        </div>
+        <div class="myPictures">
+          <div class="textNumber">4 / 5</div>
+          <img src="image/4.jpg" alt="photo">
+          <div class="title">pancake</div>         
+        </div>
+        <div class="myPictures">
+          <div class="textNumber">5 / 5</div>
+          <img src="image/5.jpg" alt="photo">
+          <div class="title">pancake</div>         
+        </div>
+        
+        <!-- <a class="previous" onclick="moveSlides(-1)">&#60;</a>
+        <a class="next" onclick="moveSlides(1)">&#62;</a> -->
+  
+        <div>
+          <span class="dot active" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+      </div>
+  
+
+    <script type="text/javascript" src="/script/slider.js"></script>
+  </body>
+</html>
