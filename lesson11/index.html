@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap"
+      rel="stylesheet"
+    />
+    <title>User Registration and Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <div id="registerForm">
+          <h2>Register</h2>
+          <form id="registrationForm" onsubmit="registerUser(event)">
+            <input
+              type="text"
+              id="firstName"
+              placeholder="Enter your First Name (3-15 characters, alphabets only)"
+              pattern="^[A-Za-z]{3,15}$"
+              title="3-15 characters, alphabets only"
+            />
+            <input
+              type="text"
+              id="lastName"
+              placeholder="Enter your Last Name (3-15 characters, alphabets only)"
+              pattern="^[A-Za-z]{3,15}$"
+              title="3-15 characters, alphabets only"
+            />
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your Email"
+              title="Enter a valid email address"
+            />
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Enter your Phone Number (+995xxx-xx-xx-xx)"
+              pattern="^\+995\d{9}$"
+              title="Enter a valid phone number with the Georgian country code (+995) followed by 9 digits"
+            />
+            <input
+              type="text"
+              id="username"
+              placeholder="Choose a Username (3-32 characters, letters, numbers, or underscores)"
+              pattern="^[a-zA-Z0-9_]{3,32}"
+              title="3-32 characters, letters, numbers, or underscores"
+            />
+            <input
+              type="password"
+              id="password"
+              placeholder="Choose a Password (8-16 characters, at least one uppercase, one lowercase, and one digit)"
+              pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$"
+              title="8-16 characters, at least one uppercase, one lowercase, and one digit"
+            />
+            <button type="submit">Register</button>
+          </form>
+        </div>
+        <div id="loginForm">
+          <h2>Login</h2>
+          <form id="loginForm" onsubmit="loginUser(event)">
+            <input
+              type="text"
+              id="loginUsername"
+              placeholder="Enter your Username"
+            />
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="Enter your Password"
+            />
+            <button type="submit">Login</button>
+          </form>
+          <p id="message"></p>
+        </div>
+      </div>
+    </div>
+    <script src="script/regExp.js"></script>
+  </body>
+</html>
