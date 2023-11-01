@@ -1,0 +1,201 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+
+@media (max-width: 1024px) {
+    .footer-ul  {
+        flex-direction: column;
+        align-items: center;
+        
+        }
+    .flex-about {
+        flex-direction: column-reverse;
+       }
+    .right-wrapper{
+         width: 100%;
+       }
+    .left-wrapper img {
+        width: 100%;
+        height: 500px;
+    }
+    .right-wrapper p {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .right-wrapper h4{
+        width: 100%;
+        text-align: center;
+    }
+    .form {
+        display: none;
+    }
+    .form1 input[type=submit]  {
+        display: flex;
+        margin-right: 5px;
+        width: 80px;
+    }
+    .right-history  p{
+        font-size: 28px;
+    }
+    .navigation a {
+        width:  90px;
+    }
+    .forms-box{
+        font-size: 22px;
+    }
+    
+    }
+    
+    
+    
+    @media (max-width: 768px) {
+    .footer-ul>ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    .video-textbox {
+        display: none;
+    }
+    .forms-box {
+        display: none;
+    }
+    .header-top {
+        display: none;
+    }
+    
+    .navigation {
+        display: none;
+    }
+    .mobile-container {
+        display: block;
+    }
+    .header-a {
+        display: none;
+    }
+    .copyright p  {
+        font-size: 10px;
+    }
+    .right-wrapper p{
+        font-size: 16px;
+        line-height: 20px;
+       }
+    .left-wrapper {
+        width: 100%;
+    }
+    .left-wrapper{
+      width: 100%;
+    }
+    
+    .right-wrapper img {
+        width: 30px;
+        height: 30px;
+    }
+    .left-wrapper img {
+        height: 300px;
+    }
+    .right-wrapper p {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .right-wrapper h4{
+        width: 100%;
+        text-align: center;
+    }
+    .left-wrapper img{
+      height: 450px;
+    
+     }
+     .right-history  p{
+        font-size: 24px;
+    }
+    .logo-f {
+        max-width: 105px;
+        height: 105px;
+    }
+    .title-p{
+        text-align:center;
+        padding-left: 0;
+       font-size: 28px;
+       text-shadow:#383838 1px 1px;
+    }
+    }
+    
+    @media (max-width: 481px) {
+    .form {
+            display: none;
+        }
+    .video-textbox { 
+            display: none; 
+        }
+    .gift-card span {
+            padding: 6px 0;
+        }
+    .gift-card {
+            display: flex;
+            flex-direction: row;
+            padding-top: 20px;
+        }
+    .title-p{
+            text-align:center;
+            padding-left: 0;
+         }
+    .right-history  p{
+        font-size: 18px;
+        }
+    .logo-f {
+        max-width: 90px;
+        height: 90px;
+        }
+    .search-container {
+        grid-template:
+		"search" 40px
+		/ 280px;
+    }
+    .search-container input {
+        font-size: 16px;
+    }
+    }
+
+/* Media Query for max-width: 1024px */
+@media (max-width: 1024px) {
+    .formSingIn {
+      width: 80%; /* Adjust the width as needed */
+    }
+    #registerForm {
+      display: block; /* Show registerForm under loginForm */
+    }
+  }
+  
+  /* Media Query for max-width: 768px */
+  @media (max-width: 768px) {
+    .formSingIn {
+      width: 90%; /* Adjust the width as needed */
+    }
+    .title-reg {
+      font-size: 24px; /* Adjust font size as needed */
+    }
+    #registerForm {
+      display: block; /* Show registerForm under loginForm */
+    }
+  }
+  
+  /* Media Query for max-width: 481px */
+  @media (max-width: 481px) {
+    .formSingIn {
+      width: 95%; /* Adjust the width as needed */
+    }
+    .title-reg {
+      font-size: 20px; /* Adjust font size as needed */
+    }
+    .formSingIn input {
+      font-size: 14px; /* Adjust font size as needed */
+    }
+    #registerForm {
+      display: block; /* Show registerForm under loginForm */
+    }
+  }
