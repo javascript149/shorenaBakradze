@@ -1,14 +1,13 @@
 
-
 let indexOfSlide = 1;
 let slides = document.querySelectorAll(".image-container2");
 let dots = document.querySelectorAll(".dot");
 
 for (let i = 0; i < dots.length; i++) {
     dots[i].addEventListener("click", function () {
-      currentSlide(i + 1); // Pass the dot index as an argument
-      clearInterval(slideInterval); // Reset the interval timer
-      slideInterval = setInterval(autoSlide, 4000); // Start the interval again
+      currentSlide(i + 1); 
+      clearInterval(slideInterval);
+      slideInterval = setInterval(autoSlide, 4000); 
     });
   }
 

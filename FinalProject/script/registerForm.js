@@ -1,7 +1,5 @@
 
-function registerUser(event) {
-    event.preventDefault();
-
+function registerUser() {
     let firstName = document.getElementById('firstName').value;
     let lastName = document.getElementById('lastName').value;
     let username = document.getElementById('registerUsername').value;
@@ -20,7 +18,7 @@ function registerUser(event) {
         firstName: firstName,
         lastName: lastName,
         username: username,
-        password: password
+        password: "********"
     };
 
     if (oldUsersData === null) {
@@ -29,6 +27,12 @@ function registerUser(event) {
         oldUsersData.push(user);
         localStorage.setItem('usersData', JSON.stringify(oldUsersData));
     }
-    document.getElementById("registerMessage").textContent = "Registration successful.";
-}
 
+    let sessionToken = generateString(36);
+
+
+    localStorage.setItem("sessionToken", sessionToken);
+
+    document.getElementById("registerMessage").textContent = "Registration successful.";
+       
+}

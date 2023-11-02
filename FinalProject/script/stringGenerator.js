@@ -1,15 +1,13 @@
-    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-    function generateString(length) {
-        let result = '';
-        const charactersLength = characters.length;
+const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
-        for (let i = 0; i < length; i++) {
-            result += characters.charAt(Math.floor(Math.random() * charactersLength));
-        }
+ function generateString(length) {
+    let result = '';
+    const charactersLength = characters.length;
 
-        return result;
+    for (let i = 0; i < length; i++) {
+        result = result + characters.charAt(Math.floor(Math.random() * charactersLength));
     }
-// export {
-//     generateString
-// };
+
+    return result;
+}

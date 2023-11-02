@@ -1,5 +1,3 @@
-
-
 function filterProducts() {
   let searchInput = document.getElementById("searchInput");
   let filter = searchInput.value.toLowerCase();
@@ -9,9 +7,9 @@ function filterProducts() {
   items.forEach((item) => {
     let itemValue = item.querySelector("p").textContent.toLowerCase();
     if (itemValue.indexOf(filter) > -1) {
-      item.style.display = "block"; // Display the item
+      item.style.display = "block"; 
     } else {
-      item.style.display = "none"; // Hide the item
+      item.style.display = "none"; 
     }
   });
 }

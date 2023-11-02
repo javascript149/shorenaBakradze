@@ -1,7 +1,7 @@
 function toggleText() {
-    var dots = document.getElementById("dots");
-    var hiddenText = document.getElementById("hiddenText");
-    var buttonText = document.querySelector('.readMore');
+    let dots = document.getElementById("dots");
+    let hiddenText = document.getElementById("hiddenText");
+    let buttonText = document.querySelector('.readMore');
   
     if (hiddenText.style.display === "none" || hiddenText.style.display === "") {
       hiddenText.style.display = "inline";

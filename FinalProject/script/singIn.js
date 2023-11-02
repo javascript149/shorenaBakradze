@@ -1,12 +1,24 @@
-function signInHandler(event) {
-    event.preventDefault(); // Prevent form submission
 
+const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+function generateString(length) {
+    let result = '';
+    const charactersLength = characters.length;
+
+    for (let i = 0; i < length; i++) {
+        result = result + characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+
+    return result;
+}
+
+function signInAndCreateCookie() {
     let username = document.getElementById("loginUsername").value;
     let password = document.getElementById("loginPassword").value;
     let rememberMeChecked = document.getElementById("rememberMe").checked;
 
-    // Fetch user data from localStorage and validate
-    let dataFromDb = JSON.parse(localStorage.getItem("usersData")) || [];
+    let dataFromDb = localStorage.getItem("usersData");
+    dataFromDb = JSON.parse(dataFromDb);
 
     for (let userData of dataFromDb) {
         if (userData.username === username && userData.password === password) {
@@ -22,12 +34,11 @@ function signInHandler(event) {
                 userData.sessionToken = value;
                 sessionStorage.setItem("sessionToken", value);
             }
-            localStorage.setItem("usersData", JSON.stringify(dataFromDb));
-            // Successful login, you can redirect the user or show a success message here.
-            return;
+            
+           
+            window.location.href = "index.html";
         }
     }
-    document.getElementById("loginMessage").textContent = "Invalid username or password.";
+
+    localStorage.setItem("usersData", JSON.stringify(dataFromDb));
 }
-
-
