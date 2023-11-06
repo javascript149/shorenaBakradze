@@ -47,7 +47,9 @@
     .forms-box{
         font-size: 22px;
     }
-    
+    .button-reg{
+        position: relative;
+        left: 5px;   }
     }
     
     
