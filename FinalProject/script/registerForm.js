@@ -18,7 +18,7 @@ function registerUser() {
         firstName: firstName,
         lastName: lastName,
         username: username,
-        password: "********"
+        password: password,
     };
 
     if (oldUsersData === null) {
