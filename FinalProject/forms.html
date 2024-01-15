@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Maison Louis Marie composes delicate scents, a floral tradition since 1792. Vegan / Cruelty / Paraben / Phthalate / Sulfate free. Complimentary shipping on orders over $50."
+    />
+    <meta
+      name="keywords"
+      content="Maison loures Maria, Perfumes, fragrance, sale"
+    />
+    <meta name="author" content="Shorena Bakradze" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:url" content="shorenabakradze.github.io/final/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="About Maison Louis Marie" />
+    <meta
+      property="og:description"
+      content="A botanical tradition since 1792"
+    />
+    <meta
+      property="og:image"
+      content="https://th.bing.com/th/id/R.3c27bca90a3859011351878ae2dde792?rik=tT9w9dOvLyDI%2bQ&pid=ImgRaw&r=0"
+    />
+    <title>Maison loures Maria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/style/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/style/style.css" />
+    <link rel="stylesheet" href="/style/responsive.css" />
+    <link rel="icon" href="image/logo1.jpg" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="header-nav">
+          <div class="forms-box">
+            <a class="header-a" href="index.html">
+              <img src="/image/head-logo.jpg" alt="logo" />
+            </a>
+            <h2 class="forms-box">Maison Louis Marie</h2>
+          </div>
+          <div class="mobile-container">
+            <div class="topnav">
+              <a href="index.html" class="active">Maison Louis Marie</a>
+              <div id="myLinks">
+                <ul>
+                  <li><a href="index.html" class="active">Home</a></li>
+                  <li><a href="perfumes.html">Perfumes</a></li>
+                  <li><a href="sale.html">Sale</a></li>
+                  <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+              </div>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+          </div>
+          <nav class="navigation">
+            <ul>
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="perfumes.html">Perfumes</a></li>
+              <li><a href="sale.html">Sale</a></li>
+              <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="container-reg flex-regist">
+        <div id="loginForms">
+          <h2 class="title-reg">Login</h2>
+          <form
+            class="formSignIn"
+            id="loginForm"
+            onsubmit="signInAndCreateCookie(); return false;"
+          >
+            <label for="loginUsername">User</label>
+            <input
+              type="text"
+              id="loginUsername"
+              placeholder="Enter your Username"
+            />
+            <label for="loginPassword">Password:</label>
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="Enter your Password"
+            />
+            <label class="rememberMe" for="rememberMe">Remember Me?</label>
+            <input type="checkbox" id="rememberMe" />
+            <button class="button-80" value="login" type="submit">Login</button>
+          </form>
+          <p id="loginMessage"></p>
+        </div>
+        <div id="registerForm">
+          <h2 class="title-reg">Register</h2>
+          <form class="formSignIn" id="registrationForm" onsubmit="return registerUser();">
+              <label for="firstName">First Name</label>
+              <input
+                  type="text"
+                  id="firstName"
+                  placeholder="Enter your First Name (3-15 characters, alphabets only)"
+                  pattern="^[A-Za-z]{3,15}$"
+                  title="3-15 characters, alphabets only"
+                  oninput="firstNameValidator('firstName', 'firstNameRes')"
+              />
+              <p id="firstNameRes" style="color: red;"></p>
+      
+              <label for="lastName">Last Name</label>
+              <input
+                  type="text"
+                  id="lastName"
+                  placeholder="Enter your Last Name (3-15 characters, alphabets only)"
+                  pattern="^[A-Za-z]{3,15}$"
+                  title="3-15 characters, alphabets only"
+                  oninput="firstNameValidator('lastName', 'lastNameRes')"
+              />
+              <p id="lastNameRes" style="color: red;"></p>
+               <label for="registerUsername">Username</label>
+              <input
+                  type="text"
+                  id="registerUsername"
+                  placeholder="Choose a Username (3-32 characters, letters, numbers, or underscores)"
+                  pattern="^[a-zA-Z0-9_]{3,32}"
+                  title="3-32 characters, letters, numbers, or underscores"
+                  oninput="firstNameValidator('registerUsername', 'usernameRes')"
+              />
+              <p id="usernameRes" style="color: red;"></p>
+              <label for="registerPassword">Password</label>
+              <input
+                  type="password"
+                  id="registerPassword"
+                  placeholder="Choose a Password (8-16 characters, at least one uppercase, one lowercase, and one digit)"
+                  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$"
+                  title="8-16 characters, at least one uppercase, one lowercase, and one digit"
+                  oninput="firstNameValidator('registerPassword', 'passwordRes')"
+              />
+              <p id="passwordRes" style="color: red;"></p>
+      
+              <button class="button-80" type="submit">Register</button>
+          </form>
+          <p id="registerMessage"></p>
+      </div>
+    </section>
+  
+    <script src="/script/singIn.js"></script>
+    <script src="/script/registerForm.js"></script>
+    <script type="text/javascript" src="/script/formHandler.js"></script>
+  </body>
+</html>
